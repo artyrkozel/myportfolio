@@ -1,0 +1,20 @@
+@import "src/common/styles/variables";
+
+.footer {
+  background-color: #201A23;
+  padding: 50px 0;
+  p {
+    text-align: center;
+    margin-bottom: 0;
+    color: $TitleColorLight
+  }
+}
+
+@media screen and (max-width: 768px){
+  .footer{
+    padding: 25px 0;
+    p{
+      font-size: 14px;
+    }
+  }
+}

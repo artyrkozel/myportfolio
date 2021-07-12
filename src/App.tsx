@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./header/Header";
+import "bootstrap/dist/css/bootstrap.css"
+import {Route} from 'react-router-dom'
+import {Footer} from './footer/Footer';
+import Main from "./main/Main";
+import About from "./about/About";
+import Education from "./education/Education";
+import Skills from "./skills/Skills";
+import Projects from "./projects/Projects";
+import Contacts from "./contacts/Contacts";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Header/>
+            <Route exact path={'/'} render={() => <Main/>}/>
+            <Route exact path={'/'} render={() => <About/>}/>
+            <Route exact path={'/'} render={() => <Education/>}/>
+            <Route exact path={'/'} render={() => <Skills/>}/>
+            <Route exact path={'/'} render={() => <Projects/>}/>
+            <Route exact path={'/'} render={() => <Contacts/>}/>
+            <Footer/>
+        </>
+    );
 }
 
 export default App;

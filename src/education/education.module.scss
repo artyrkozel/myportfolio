@@ -1,0 +1,125 @@
+@import "../common/styles/variables";
+
+.section {
+  padding: 100px 0;
+}
+
+.education {
+  position: relative;
+  background-color: rgba(#201A23, 90);
+  h2{
+    color: #fff
+  }
+  .educationContent{
+    position: relative;
+    .timeLine {
+      margin: 0;
+      padding: 50px 0;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        width: 4px;
+        background: $BackgroundMain;
+        margin-left: -2px;
+      }
+      .timeLineBlock{
+        margin: 0 0 50px;
+        position: relative;
+        &:after{
+          content: "";
+          display: table;
+          clear: both;
+        }
+        &:nth-child(2n) .cdTimelineContent{
+          float: right;
+          text-align: left;
+        }
+        .cdTimelineImg{
+          position: absolute;
+          background-color: #201A23;
+          border: 2px solid $BackgroundMain;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          height: 35px;
+          top: 25px;
+          width: 35px;
+          z-index: 1;
+          left: 50%;
+          transform: translate(-50%, 0);
+          border-radius: 50%;
+          .icon{
+            background-color: $BackgroundMain;
+            border-radius: 50%;
+            display: block;
+            height: 10px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 10px;
+          }
+        }
+      }
+      .cdTimelineContent{
+        text-align: right;
+        position: relative;
+        width: 45%;
+        p{
+          color: $Text;
+        }
+        .title{
+          font-family: $MainFont;
+          color: #fff;
+          text-transform: uppercase;
+          font-size: 1.7em;
+        }
+      }
+    }
+
+  }
+}
+@media screen and (max-width: 992px){
+  .education{
+    .educationContent{
+      .timeLine{
+        &:before{
+          left: 45px;
+        }
+        .timeLineBlock{
+          display: inline-flex;
+          &:last-child{
+            margin: 0;
+          }
+          &:nth-child(2n) .cdTimelineContent{
+            text-align: left;
+          }
+          .cdTimelineImg{
+            position: relative;
+            left: 45px;
+            margin-right: 60px;
+          }
+          .cdTimelineContent{
+            width: 100%;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen  and (max-width: 576px) {
+  .education{
+    .educationContent{
+      .cdTimelineContent{
+        .title{
+          font-size: 27px;
+        }
+      }
+    }
+  }
+}

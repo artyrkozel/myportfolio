@@ -1,0 +1,161 @@
+@import "src/common/styles/variables";
+
+.skillItemWr{
+    margin-bottom: 50px;
+}
+
+.skillItem {
+    position: relative;
+    font-family: $MainFont;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $BackgroundLight;
+    margin-bottom: 80px;
+    border-radius: 50px;
+    padding: 30px 15px 25px 15px;
+    -webkit-box-shadow: 0 15px 30px 0 rgba(255, 69, 0, 0.15);
+    box-shadow: rgba(6, 82, 221, 0.15) 0px 15px 30px 0px;
+    cursor: pointer;
+    transition: .6s;
+    &:hover {
+        background: linear-gradient(130deg, $BackgroundMain 0%, #8293ff 100%);;
+        .body {
+            background-color: transparent;
+            color: $TitleColorLight;
+            h4{
+                color: $TitleColorLight;
+            }
+            span{
+                color: $TitleColorLight;
+            }
+        }
+        .iconNext{
+            background-color: $BackgroundDark;
+            span{
+                background-color: $BackgroundDark;
+            }
+        }
+        .iconBorder:before, .iconBorder:after{
+            border-color: $BackgroundDark;
+        }
+
+    }
+    .skillBg {
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        visibility: hidden;
+        position: absolute;
+        border-radius: 50px;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+    .body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 50px;
+        transition: .6s;
+        h4 {
+            font-size: 50px;
+            color: $BackgroundMain;
+            font-family: $MainFont;
+            font-weight: 700;
+        }
+        h5{
+            font-family: $MainFont;
+            margin: 0 0 10px 0;
+            font-size: 1.467rem;
+            font-weight: bold;
+        }
+        .description{
+            margin-bottom: 30px;
+            color: $Text;
+            font-weight: 200;
+            transition: .6s;
+        }
+    }
+}
+.icon {
+    height: 60px;
+    width: 60px;
+    background-color: #61dafb;
+}
+.iconNext {
+    left: 50%;
+    bottom: -30px;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: $BtnColorLight;
+    background: $BackgroundMain;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.iconNext span {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    position: relative;
+    line-height: 60px;
+    border-radius: 50%;
+    color: $BtnColorLight;
+    background: $BackgroundMain;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.iconBorder {
+    left: 50%;
+    bottom: 0;
+    position: absolute;
+    margin-left: 30px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -3;
+}
+.skillItem .iconBorder::before {
+    top: 0;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: 2px solid $BackgroundMain;
+    box-sizing: border-box;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+}
+.skillItem .iconBorder::after {
+    top: 0;
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 50%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: 2px solid $BackgroundMain;
+    right: -10px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+}

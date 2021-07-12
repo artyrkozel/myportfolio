@@ -1,0 +1,147 @@
+@import "src/common/styles/variables";
+
+.project {
+  .portfolioImg{
+    width: 80%;
+    border-radius: 30px;
+    box-shadow: -19px 1px 34px -22px black;
+  }
+}
+.backBtn{
+  text-transform: capitalize;
+  transition: .6s;
+  a{
+    transition: .6s;
+    color: $BackgroundMain;
+    &:hover{
+      text-decoration: none;
+      color: white;
+    }
+  }
+  &:hover{
+    text-decoration: none;
+    transform: scaleY(5);
+  }
+
+}
+.portfolioHeader {
+  font-family: 'Poppins', sans-serif;
+  z-index: 42;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  &:before{
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    position: absolute;
+    background: #201A23;
+  }
+  h1,{
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
+  }
+}
+.project {
+  .headerTitle{
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.467rem;
+    font-weight: 500;
+    color: #171718;
+    line-height: 1.42;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    h5 {
+      font-weight: 700;
+    }
+    &:before{
+      content: "";
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      position: absolute;
+      border-radius: 5px;
+      width: 60px;
+      background-color: $BackgroundMain;
+    }
+    &:after{
+      content: "";
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      position: absolute;
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.05);
+      width: 100%;
+    }
+  }
+  .projectDetails{
+    ul {
+      padding: 0;
+      margin-bottom: 24px;
+      li{
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 15px;
+        font-size: 16px;
+        text-decoration: none;
+        list-style: none;
+        text-transform: capitalize;
+        h6 {
+          display: inline;
+          font-weight: bold;
+        }
+        span {
+          font-weight: 300;
+          a {
+            color: black;
+            text-decoration: underline;
+            transition: .6s;
+            &:hover{
+              color: $BackgroundMain;
+              transition: .6s;
+            }
+          }
+          &:before{
+            content: ":";
+            margin-left: 10px;
+            margin-right: 10px;
+            font-weight: 700;
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .project{
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 992px){
+.project{
+  height: 100%;
+  .portfolioImg{
+    display: none;
+  }
+}
+  .cont{
+    padding: 76px 0 20px 0;
+  }
+}
+@media screen and (max-width: 768px){
+  .cont{
+    padding-t: 60px 0 20px 0;
+  }
+}

@@ -1,0 +1,76 @@
+@import './src/common/styles/variables';
+
+.about {
+  .mainImg{
+    img{
+      border-radius: 50px;
+      max-width: 90%;
+    }
+  }
+  h6{
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 50px;
+    color: $BtnColorLight;
+    padding: 8px 18px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background: $BackgroundMain;
+    text-transform: capitalize;
+  }
+  h2{
+    font-family: $MainFont;
+    font-weight: 700;
+    margin: 0;
+    color: $TitleColorBlack;
+    line-height: 1.42;
+  }
+  padding: 100px 0;
+  .aboutInner {
+    > p {
+      margin-bottom: 30px;
+      line-height: 1.9;
+      color: $Text;
+    }
+    h2{
+      margin-bottom: 20px;
+      font-size: 36px;
+    }
+    .aboutInfo{
+      list-style: none;
+      margin-bottom: 38px;
+      padding: 0;
+      li {
+        margin-bottom: 15px;
+        h5 {
+          font-size: 18px;
+          font-weight: bold;
+          font-family: $MainFont;
+        }
+        span{
+          font-size: 16px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 400;
+          color: $Text;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px){
+  .about{
+    padding: 70px 0;
+    .mainImg{
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 576px){
+  .about{
+    .aboutInner{
+      h2{
+        font-size: 25px;
+      }
+    }
+  }
+}

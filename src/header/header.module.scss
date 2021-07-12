@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .icon{
+    color: #0652DD;
+  }
+}
+.headerLogo {
+  position: relative;
+  cursor: pointer;
+}

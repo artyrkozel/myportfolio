@@ -1,0 +1,33 @@
+@import "src/common/styles/variables";
+
+.section {
+    padding: 100px 0;
+}
+.skillBlock {
+    height: 100vh;
+}
+
+.skillContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.skillBlock h2 {
+    font-family: $MainFont;
+    font-weight: 700;
+    line-height: 1.42;
+}
+.skills {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1026px) {
+    .section {
+        padding: 50px 0;
+    }
+    .skillBlock {
+        height: 100%;
+    }
+}
