@@ -5,11 +5,7 @@ import Modal from "../../Modal/Modal";
 import {dataType} from "../Projects";
 
 type projectType = {
-    item: dataType
-    title: string
-    id: string
-    bg: any
-    photo: string
+    project: dataType
 }
 
 const Project = React.memo((props: projectType) => {
@@ -26,15 +22,12 @@ const Project = React.memo((props: projectType) => {
                 <div className={styles.wrContent}>
                     <div className={styles.content}>
                         <div style={{height: '120px'}}></div>
-                        <h1 className={styles.title}>{props.title}</h1>
+                        <h1 className={styles.title}>{props.project.title}</h1>
                         <Btn title={"More"} />
                     </div>
                 </div>
-                <Modal modalActive={modalActive} onClickModalHandler={onClickModalHandler} item={props.item} photo={props.photo}/>
+                <Modal modalActive={modalActive} onClickModalHandler={onClickModalHandler} item={props.project} photo={props.project.img}/>
             </div>
-
-
-
     )
 })
 
